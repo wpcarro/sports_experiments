@@ -1,4 +1,4 @@
-defmodule Sandbox.RotoWire do
+defmodule Sandbox.Ingestor.RotoWire do
   @moduledoc false
 
   alias Sandbox.DepthChart
@@ -11,8 +11,6 @@ defmodule Sandbox.RotoWire do
   @nba_players_longhand DepthChart.depth_charts() |> Enum.flat_map(&DepthChart.all_players/1)
   @nba_players_shorthand @nba_players_longhand |> Enum.map(&String.Extra.shorthand_name/1)
   @nba_players_re (@nba_players_longhand ++ @nba_players_shorthand) |> Enum.join("|") |> Regex.compile!([:caseless])
-
-  IO.inspect(@nba_players_re)
 
   def read do
     ExTwitter.search(@user, count: @max_count)

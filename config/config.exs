@@ -9,8 +9,7 @@ use Mix.Config
 # 3rd-party users, it should be done in your "mix.exs" file.
 
 # You can configure for your application as:
-#
-#     config :sandbox, key: :value
+# #     config :sandbox, key: :value
 #
 # And access this configuration in your application as:
 #
@@ -30,8 +29,8 @@ use Mix.Config
 #     import_config "#{Mix.env}.exs"
 
 config :extwitter, :oauth, [
-  consumer_key: Config.from_file("config/twitter_creds.txt", "consumer_key"),
-  consumer_secret: Config.from_file("config/twitter_creds.txt", "consumer_secret"),
-  access_token: Config.from_file("config/twitter_creds.txt", "access_token"),
-  access_token_secret: Config.from_file("config/twitter_creds.txt", "access_token_secret")
+  # consumer_key: Config.Extra.from_file("config/twitter_creds.txt", "consumer_key"),
+  # consumer_secret: Config.Extra.from_file("config/twitter_creds.txt", "consumer_secret"),
+  # access_token: Config.Extra.from_file("config/twitter_creds.txt", "access_token"),
+  # access_token_secret: Config.Extra.from_file("config/twitter_creds.txt", "access_token_secret")
 ]

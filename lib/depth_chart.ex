@@ -3,6 +3,8 @@ defmodule Sandbox.DepthChart do
 
   @source "nba_depth_charts.html"
 
+  @type position :: :point_guard | :shooting_guard | :small_forward | :power_forward | :center
+
   alias __MODULE__
 
   defstruct [
